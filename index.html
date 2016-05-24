@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>enojpad</title>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+  <pre id="editor"></pre>
+
+  <script src="./js/ace/ace.js" type="text/javascript" charset="utf-8"></script>
+
+  <script src="./js/ace/theme-cobalt.js" type="text/javascript" charset="utf-8"></script>
+  <script src="./js/ace/theme-github.js" type="text/javascript" charset="utf-8"></script>
+  <script src="./js/ace/theme-monokai.js" type="text/javascript" charset="utf-8"></script>
+  <script src="./js/ace/theme-solarized_dark.js" type="text/javascript" charset="utf-8"></script>
+  <script src="./js/ace/theme-xcode.js" type="text/javascript" charset="utf-8"></script>
+
+  <script src="./js/ace/mode-coffee.js" type="text/javascript" charset="utf-8"></script>
+  <script src="./js/ace/mode-css.js" type="text/javascript" charset="utf-8"></script>
+  <script src="./js/ace/mode-ejs.js" type="text/javascript" charset="utf-8"></script>
+  <script src="./js/ace/mode-glsl.js" type="text/javascript" charset="utf-8"></script>
+  <script src="./js/ace/mode-haskell.js" type="text/javascript" charset="utf-8"></script>
+  <script src="./js/ace/mode-html.js" type="text/javascript" charset="utf-8"></script>
+  <script src="./js/ace/mode-jade.js" type="text/javascript" charset="utf-8"></script>
+  <script src="./js/ace/mode-javascript.js" type="text/javascript" charset="utf-8"></script>
+  <script src="./js/ace/mode-json.js" type="text/javascript" charset="utf-8"></script>
+  <script src="./js/ace/mode-lisp.js" type="text/javascript" charset="utf-8"></script>
+  <script src="./js/ace/mode-lua.js" type="text/javascript" charset="utf-8"></script>
+  <script src="./js/ace/mode-makefile.js" type="text/javascript" charset="utf-8"></script>
+  <script src="./js/ace/mode-markdown.js" type="text/javascript" charset="utf-8"></script>
+  <script src="./js/ace/mode-pascal.js" type="text/javascript" charset="utf-8"></script>
+  <script src="./js/ace/mode-plain_text.js" type="text/javascript" charset="utf-8"></script>
+  <script src="./js/ace/mode-python.js" type="text/javascript" charset="utf-8"></script>
+  <script src="./js/ace/mode-powershell.js" type="text/javascript" charset="utf-8"></script>
+  <script src="./js/ace/mode-ruby.js" type="text/javascript" charset="utf-8"></script>
+  <script src="./js/ace/mode-xml.js" type="text/javascript" charset="utf-8"></script>
+  <script>
+    var editor = ace.edit("editor");
+    editor.setTheme("ace/theme/github");
+
+    var mode_plain_text =  ace.require("ace/mode/plain_text").Mode;
+    var mode_lua =         ace.require("ace/mode/lua").Mode;
+    var mode_coffee =       ace.require("ace/mode/coffee").Mode;
+    var mode_css =         ace.require("ace/mode/css").Mode;
+    var mode_glsl =        ace.require("ace/mode/glsl").Mode;
+    var mode_haskell =     ace.require("ace/mode/haskell").Mode;
+    var mode_html =        ace.require("ace/mode/html").Mode;
+    var mode_jade =        ace.require("ace/mode/jade").Mode;
+    var mode_ejs =         ace.require("ace/mode/ejs").Mode;
+    var mode_javascript =  ace.require("ace/mode/javascript").Mode;
+    var mode_json =        ace.require("ace/mode/json").Mode;
+    var mode_lisp =        ace.require("ace/mode/lisp").Mode;
+    var mode_makefile =    ace.require("ace/mode/makefile").Mode;
+    var mode_markdown =    ace.require("ace/mode/markdown").Mode;
+    var mode_pascal =      ace.require("ace/mode/pascal").Mode;
+    var mode_python =      ace.require("ace/mode/python").Mode;
+    var mode_powershell =  ace.require("ace/mode/powershell").Mode;
+    var mode_ruby =        ace.require("ace/mode/ruby").Mode;
+    var mode_xml =         ace.require("ace/mode/xml").Mode;
+    editor.session.setMode(new mode_plain_text());
+  </script>
+  <script src="./js/gui.js"></script>
+</body>
+</html>
